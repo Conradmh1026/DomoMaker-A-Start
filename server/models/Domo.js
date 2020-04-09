@@ -32,12 +32,12 @@ const DomoSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-DomoSchema.static.toAPI = (doc) => ({
+DomoSchema.statics.toAPI = (doc) => ({
   name: doc.name,
   age: doc.age,
 });
 
-DomoSchema.static.findByOwner = (ownerId, callback) => {
+DomoSchema.statics.findByOwner = (ownerId, callback) => {
   const search = {
     owner: convertId(ownerId),
   };
