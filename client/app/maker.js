@@ -27,6 +27,8 @@ const DomoForm = (props) => {
             <input id="domoName" type="text" name="name" placholder="Domo Name" />
             <label htmlFor="age">Age: </label>
             <input id="domoAge" type="text" name="age" placeholder="Domo Age" />
+            <label htmlFor="Level">Level: </label>
+            <input id="domoLevel" type="text" name="level" placeholder="Domo Level" />
             <input type="hidden" name="_csrf" value={props.csrf} />
             <input className="makeDomoSubmit" type="submit" value="Make Domo" />
         </form>
@@ -48,6 +50,7 @@ const DomoList = function (props) {
                 <img src="/assets/img/domoface.jpeg" alt="domo face" className="domoFace" />
                 <h3 className="domoName">Name: {domo.name}</h3>
                 <h3 className="domoAge">Age: {domo.age}</h3>
+                <h3 className="domoLevel">Level: {domo.level}</h3>
                 <h3 className="domoTime">Created at: {domo.createdData}</h3>
             </div>
         );
